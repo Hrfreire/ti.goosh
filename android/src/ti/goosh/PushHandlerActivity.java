@@ -23,7 +23,14 @@ public class PushHandlerActivity extends Activity {
 
 			TiGooshModule module = TiGooshModule.getModule();
 			Context context = getApplicationContext();
-			String notification = getIntent().getStringExtra(TiGooshModule.INTENT_EXTRA);
+
+			String notification = "";
+			
+			notification = getIntent().getStringExtra(TiGooshModule.INTENT_EXTRA);
+
+			if(notification == null){
+				notification = "";
+			}
 
 			Intent launcherIntent;
 

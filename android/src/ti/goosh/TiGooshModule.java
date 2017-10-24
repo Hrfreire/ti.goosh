@@ -85,6 +85,10 @@ public class TiGooshModule extends KrollModule {
 	            		}
 			}
 
+			if(notification == null){
+				notification = "";
+			}
+
 			if (!notification.isEmpty()) {
 				sendMessage(notification, true);
 			} else {
